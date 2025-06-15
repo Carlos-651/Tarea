@@ -16,6 +16,19 @@ body {
 
 /* Botones */
 
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-container {
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
 .añadir {
     background-color: #4CAF50;
     color: rgb(255, 255, 255);
