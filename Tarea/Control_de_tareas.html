@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style_prueba.css">
+        <title>Lista de Tareas</title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="button-container">
+                <button id="crear" class="añadir">Añadir tarea :D </button>
+                <button id="eliminar" class="eliminar">Eliminar tarea :P </button>
+            </div>
+            <div id="contenedor-tareas"></div>
+        </div>
+
+        <script>
+
+            btnCrear = document.getElementById("crear");
+            btnEliminar = document.getElementById("eliminar");
+            contenedorTareas = document.getElementById("contenedor-tareas");
+            let contadorTareas = 1;
+
+    /**************************************************************************************************/
+
+    //Botones
+
+            //Boton para una nueva tarea
+
+            btnCrear.addEventListener("click", () => {
+                nuevaTarea = document.createElement("div");
+                nuevaTarea.className = "tarea";
+                nuevaTarea.innerHTML = `
+                    <h3>Tarea ${contadorTareas}</h3>
+                    <p>NOOOOOO nueva tarea :[</p>
+                `;
+                contenedorTareas.appendChild(nuevaTarea);
+                contadorTareas++;
+            });
+
+            //Boton para una nueva tarea
+
+            btnEliminar.addEventListener("click", () => {
+                if (contenedorTareas.lastChild) {
+                    contenedorTareas.removeChild(contenedorTareas.lastChild);
+                    if (contadorTareas > 1) contadorTareas--;
+                }
+            });
+
+        </script>
+    </body>
+</html>

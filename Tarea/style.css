@@ -1,0 +1,52 @@
+/* Estilo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+/* Botones */
+
+.añadir {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+}
+
+.eliminar {
+    background-color: #f44336;
+    color: rgb(255, 255, 255);
+}
+
+/* Tareas */
+#contenedor-tareas {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.tarea {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.tarea h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.tarea p {
+    color: #666;
+    margin-bottom: 0;
+}
